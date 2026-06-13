@@ -1,0 +1,15 @@
+{
+  "endpoint": "GET /search",
+  "base_url": "https://tenor.googleapis.com/v2",
+  "query_parameters": {
+    "key": "YOUR_API_KEY",
+    "q": "excited",
+    "client_key": "my_test_app",
+    "limit": 10,
+    "contentfilter": "medium",
+    "locale": "en_US",
+    "country": "US",
+    "media_filter": "gif,tinygif"
+  },
+  "example_url": "https://tenor.googleapis.com/v2/search?key=YOUR_API_KEY&q=excited&client_key=my_test_app&limit=10&contentfilter=medium&media_filter=gif,tinygif"
+}

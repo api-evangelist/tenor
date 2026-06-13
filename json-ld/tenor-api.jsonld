@@ -1,0 +1,79 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "tenor": "https://developers.google.com/tenor/",
+    "api": "https://raw.githubusercontent.com/api-evangelist/tenor/main/openapi/openapi.yml"
+  },
+  "@type": "WebAPI",
+  "@id": "https://tenor.googleapis.com/v2",
+  "name": "Tenor GIF Search API",
+  "description": "REST API for searching and browsing animated GIFs and stickers on Google's Tenor platform.",
+  "url": "https://developers.google.com/tenor",
+  "documentation": "https://developers.google.com/tenor/guides/quickstart",
+  "provider": {
+    "@type": "Organization",
+    "name": "Google / Tenor",
+    "url": "https://tenor.com",
+    "sameAs": "https://developers.google.com/tenor"
+  },
+  "termsOfService": "https://tenor.com/legal-terms",
+  "license": "https://policies.google.com/privacy",
+  "endpointURL": "https://tenor.googleapis.com/v2",
+  "availableChannel": {
+    "@type": "ServiceChannel",
+    "serviceUrl": "https://tenor.googleapis.com/v2"
+  },
+  "offers": {
+    "@type": "Offer",
+    "description": "API access requires a Google Cloud API key. New client registrations closed January 2026; API sunset June 30, 2026.",
+    "url": "https://developers.google.com/tenor/guides/quickstart"
+  },
+  "potentialAction": [
+    {
+      "@type": "SearchAction",
+      "name": "Search GIFs",
+      "description": "Search for GIFs and stickers by query string.",
+      "target": "https://tenor.googleapis.com/v2/search?q={q}&key={key}"
+    },
+    {
+      "@type": "Action",
+      "name": "Get Featured GIFs",
+      "description": "Retrieve the current globally featured GIFs.",
+      "target": "https://tenor.googleapis.com/v2/featured?key={key}"
+    },
+    {
+      "@type": "Action",
+      "name": "Get Categories",
+      "description": "Retrieve GIF categories.",
+      "target": "https://tenor.googleapis.com/v2/categories?key={key}"
+    },
+    {
+      "@type": "Action",
+      "name": "Get Trending Terms",
+      "description": "Retrieve current trending search terms.",
+      "target": "https://tenor.googleapis.com/v2/trending_terms?key={key}"
+    }
+  ],
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "apiVersion",
+      "value": "v2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "supportedLanguages",
+      "value": "45+"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "dailySearchVolume",
+      "value": "300 million+"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "sunsetDate",
+      "value": "2026-06-30"
+    }
+  ]
+}

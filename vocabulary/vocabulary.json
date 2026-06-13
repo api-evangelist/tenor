@@ -1,0 +1,52 @@
+{
+  "vocabulary": [
+    {
+      "term": "GIF",
+      "definition": "Graphics Interchange Format — an animated or static image format widely used for reaction and expressive content on the web."
+    },
+    {
+      "term": "sticker",
+      "definition": "A transparent-background image or animation used for expressive overlays in messaging and social applications."
+    },
+    {
+      "term": "ResponseObject",
+      "definition": "A Tenor API object representing a single GIF or sticker item, including its media formats, metadata, and URLs."
+    },
+    {
+      "term": "media_formats",
+      "definition": "A map of format names (e.g., gif, mp4, tinygif) to their corresponding media objects, each containing URL, dimensions, and file size."
+    },
+    {
+      "term": "contentfilter",
+      "definition": "A safety filter parameter controlling the maturity level of returned content. Values: off, low, medium, high."
+    },
+    {
+      "term": "searchfilter",
+      "definition": "A filter to restrict returned content type. Accepted values include sticker, static, and -static."
+    },
+    {
+      "term": "ar_range",
+      "definition": "Aspect ratio filter. Values: all (no constraint), wide (0.42–2.36), standard (0.56–1.78)."
+    },
+    {
+      "term": "pos",
+      "definition": "A pagination cursor returned by the API in the `next` field, used to retrieve subsequent pages of results."
+    },
+    {
+      "term": "client_key",
+      "definition": "A developer-defined string identifying the integration using the API key, enabling differentiation across multiple apps."
+    },
+    {
+      "term": "locale",
+      "definition": "A BCP 47-style locale string (e.g., en_US) used to interpret search terms in the appropriate language."
+    },
+    {
+      "term": "trending_terms",
+      "definition": "A list of search terms currently trending on Tenor, updated hourly by Tenor's AI."
+    },
+    {
+      "term": "registershare",
+      "definition": "An API call that records when a user shares a specific GIF, used to improve Tenor's recommendation AI."
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tenor/main/json-schema/ResponseObject.json",
+  "title": "ResponseObject",
+  "description": "A Tenor GIF or sticker response object.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the content."
+    },
+    "title": {
+      "type": "string",
+      "description": "Title of the content."
+    },
+    "media_formats": {
+      "type": "object",
+      "description": "Available media formats for the content.",
+      "additionalProperties": {
+        "type": "object"
+      }
+    },
+    "created": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Creation timestamp of the content."
+    },
+    "content_description": {
+      "type": "string",
+      "description": "Description of the content."
+    },
+    "itemurl": {
+      "type": "string",
+      "description": "URL of the content's page on Tenor."
+    },
+    "hasaudio": {
+      "type": "boolean",
+      "description": "Indicates if the content has audio."
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tenor/main/json-schema/SuggestionsResults.json",
+  "title": "SuggestionsResults",
+  "description": "Response object from the Tenor search suggestions, autocomplete, and trending terms endpoints.",
+  "type": "object",
+  "properties": {
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "A suggested or trending search term."
+      }
+    }
+  }
+}

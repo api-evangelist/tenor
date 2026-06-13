@@ -1,0 +1,19 @@
+{
+  "tags": [
+    {
+      "name": "#reaction",
+      "image": "https://media.tenor.com/images/category_reaction/tenor.gif",
+      "path": "https://tenor.com/search/reaction-gifs"
+    },
+    {
+      "name": "#love",
+      "image": "https://media.tenor.com/images/category_love/tenor.gif",
+      "path": "https://tenor.com/search/love-gifs"
+    },
+    {
+      "name": "#celebration",
+      "image": "https://media.tenor.com/images/category_celebration/tenor.gif",
+      "path": "https://tenor.com/search/celebration-gifs"
+    }
+  ]
+}

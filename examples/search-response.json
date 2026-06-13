@@ -1,0 +1,29 @@
+{
+  "next": "0.45827",
+  "results": [
+    {
+      "id": "16716839537051746769",
+      "title": "",
+      "media_formats": {
+        "gif": {
+          "url": "https://media.tenor.com/images/example1/tenor.gif",
+          "duration": 0,
+          "preview": "https://media.tenor.com/images/example1/tenor.png",
+          "dims": [498, 278],
+          "size": 1234567
+        },
+        "tinygif": {
+          "url": "https://media.tenor.com/images/example1/tenor-small.gif",
+          "duration": 0,
+          "preview": "https://media.tenor.com/images/example1/tenor-small.png",
+          "dims": [220, 123],
+          "size": 345678
+        }
+      },
+      "created": 1594229645.719459,
+      "content_description": "Excited Happy GIF",
+      "itemurl": "https://tenor.com/view/excited-happy-gif-16716839537051746769",
+      "hasaudio": false
+    }
+  ]
+}

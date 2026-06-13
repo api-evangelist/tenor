@@ -1,0 +1,13 @@
+{
+  "endpoint": "GET /featured",
+  "base_url": "https://tenor.googleapis.com/v2",
+  "query_parameters": {
+    "key": "YOUR_API_KEY",
+    "client_key": "my_test_app",
+    "limit": 20,
+    "contentfilter": "off",
+    "locale": "en_US",
+    "country": "US"
+  },
+  "example_url": "https://tenor.googleapis.com/v2/featured?key=YOUR_API_KEY&client_key=my_test_app&limit=20"
+}

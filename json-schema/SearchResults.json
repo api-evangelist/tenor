@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tenor/main/json-schema/SearchResults.json",
+  "title": "SearchResults",
+  "description": "Response object from the Tenor search and featured endpoints.",
+  "type": "object",
+  "properties": {
+    "next": {
+      "type": "string",
+      "description": "A position identifier to use with the next API query via the pos field. Empty string if no further results."
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "$ref": "ResponseObject.json"
+      }
+    }
+  }
+}

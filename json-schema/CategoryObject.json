@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tenor/main/json-schema/CategoryObject.json",
+  "title": "CategoryObject",
+  "description": "A Tenor GIF category object.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the category."
+    },
+    "image": {
+      "type": "string",
+      "description": "URL of the category image."
+    },
+    "path": {
+      "type": "string",
+      "description": "Search URL to use if the user clicks on the category."
+    }
+  }
+}
