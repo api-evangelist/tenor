@@ -1,0 +1,80 @@
+aid: tenor
+name: Tenor
+description: >
+  Tenor is Google's GIF search engine REST API that enables developers to integrate
+  animated GIF search, trending GIFs, featured content, and category browsing into
+  applications. The API processes over 300 million searches per day across 45+ languages
+  with localized, region-appropriate content. Note: As of January 2026, Google is no
+  longer accepting new API clients; the API is scheduled for sunset on June 30, 2026.
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: https://raw.githubusercontent.com/api-evangelist/tenor/refs/heads/main/apis.yml
+created: '2026-06-13'
+modified: '2026-06-13'
+specificationVersion: '0.19'
+type: Index
+tags:
+  - GIFs
+  - Animated Images
+  - Search
+  - Media
+  - Google
+apis:
+  - aid: tenor:tenor-api
+    name: Tenor GIF Search API
+    description: >
+      REST API for searching and browsing animated GIFs and stickers. Provides endpoints
+      for GIF search, trending content, featured GIFs, categories, search suggestions,
+      autocomplete, and share registration. Built on Google's Tenor platform with support
+      for 45+ languages and localized content. Base URL: https://tenor.googleapis.com/v2/
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://developers.google.com/tenor
+    baseURL: https://tenor.googleapis.com/v2
+    tags:
+      - GIFs
+      - Animated Images
+      - Search
+      - Trending
+      - Categories
+      - Media
+    properties:
+      - type: Documentation
+        url: https://developers.google.com/tenor/guides/quickstart
+      - type: Endpoints
+        url: https://developers.google.com/tenor/guides/endpoints
+      - type: RateLimits
+        url: https://developers.google.com/tenor/guides/rate-limits-and-caching
+      - type: Authentication
+        url: https://developers.google.com/tenor/guides/quickstart
+      - type: AdvancedControls
+        url: https://developers.google.com/tenor/guides/advanced-api-controls
+      - type: ResponseObjects
+        url: https://developers.google.com/tenor/guides/response-objects-and-errors
+      - type: OpenAPI
+        url: https://github.com/zuplo-samples/Tenor-OpenAPI
+      - type: Plans
+        url: https://raw.githubusercontent.com/api-evangelist/tenor/refs/heads/main/plans/plans.yml
+      - type: RateLimits
+        url: https://raw.githubusercontent.com/api-evangelist/tenor/refs/heads/main/rate-limits/rate-limits.yml
+      - type: FinOps
+        url: https://raw.githubusercontent.com/api-evangelist/tenor/refs/heads/main/finops/finops.yml
+    contact:
+      - FN: Tenor Support
+        url: https://support.google.com/tenor/
+common:
+  - type: Documentation
+    url: https://developers.google.com/tenor
+  - type: GettingStarted
+    url: https://developers.google.com/tenor/guides/quickstart
+  - type: Authentication
+    url: https://console.cloud.google.com/apis/dashboard
+  - type: Support
+    url: https://support.google.com/tenor/answer/10455265
+  - type: TermsOfService
+    url: https://tenor.com/legal-terms
+  - type: PrivacyPolicy
+    url: https://policies.google.com/privacy
+  - type: Status
+    url: https://status.cloud.google.com/
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

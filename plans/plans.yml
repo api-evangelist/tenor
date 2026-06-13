@@ -1,0 +1,25 @@
+plans:
+  - name: Free
+    description: >
+      The Tenor API is available free of charge via Google Cloud Console API key.
+      There is no separate paid tier — access is granted upon API key creation through
+      the Google Cloud Console. Note: As of January 2026, new API client registrations
+      are no longer accepted. The API is scheduled for sunset on June 30, 2026.
+    url: https://developers.google.com/tenor/guides/quickstart
+    access: public
+    pricing: free
+    authentication:
+      - type: apiKey
+        location: query
+        name: key
+    features:
+      - GIF search across 45+ languages
+      - Trending GIFs and stickers
+      - Featured content updated throughout the day
+      - GIF categories (featured and trending)
+      - Search suggestions and autocomplete
+      - Trending search terms
+      - Share registration for algorithm tuning
+      - Content filtering controls
+      - Regional and locale support
+      - Multiple media formats (GIF, MP4, WebM, WebP)

@@ -1,0 +1,27 @@
+rateLimits:
+  - name: Default Request Rate
+    description: >
+      The Tenor API enforces a default rate limit of 1 API request per second (RPS).
+      Requests made above the 1 RPS threshold will fail. Contact Google if higher
+      throughput is required for production use cases.
+    limit: 1
+    unit: requests per second
+    scope: per API key
+    url: https://developers.google.com/tenor/guides/rate-limits-and-caching
+  - name: Cache Refresh — Content URLs
+    description: >
+      If your integration caches Tenor content URLs, you must refresh the cache at
+      least once every 24 hours per Tenor's caching policy.
+    limit: 1
+    unit: refresh per 24 hours
+    scope: per cached content URL
+    url: https://developers.google.com/tenor/guides/rate-limits-and-caching
+  - name: Cache Refresh — API Responses
+    description: >
+      Tenor recommends frequent refreshing of cached API responses, as content ranking
+      for a given query can adjust throughout the day. All cached content must respect
+      the Cache-Control headers included in Tenor API responses.
+    limit: variable
+    unit: per Cache-Control header directive
+    scope: per API response
+    url: https://developers.google.com/tenor/guides/rate-limits-and-caching

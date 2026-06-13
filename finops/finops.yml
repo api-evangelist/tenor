@@ -1,0 +1,18 @@
+finops:
+  model: free
+  description: >
+    The Tenor GIF Search API has historically been free to use with an API key obtained
+    through the Google Cloud Console. There is no published paid tier or usage-based
+    pricing. Google manages API key quotas and may reach out to discuss pricing for
+    integrations requiring higher throughput beyond the default 1 RPS limit.
+  notes: >
+    As of January 13, 2026, Google is no longer accepting new API clients for the
+    Tenor API. The API is scheduled for full sunset on June 30, 2026. Existing integrations
+    should plan migration to alternative GIF search providers such as GIPHY.
+  costDrivers:
+    - name: API Requests
+      description: No per-request charges; free under the default 1 RPS limit.
+      unit: requests
+      cost: 0
+  managementURL: https://console.cloud.google.com/apis/dashboard
+  migrationGuide: https://developers.giphy.com/docs/api/tenor-migration/
