@@ -6,7 +6,7 @@ description: >
   applications. The API processes over 300 million searches per day across 45+ languages
   with localized, region-appropriate content. Note: As of January 2026, Google is no
   longer accepting new API clients; the API is scheduled for sunset on June 30, 2026.
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/tenor/refs/heads/main/apis.yml
 created: '2026-06-13'
 modified: '2026-06-13'
@@ -26,7 +26,7 @@ apis:
       for GIF search, trending content, featured GIFs, categories, search suggestions,
       autocomplete, and share registration. Built on Google's Tenor platform with support
       for 45+ languages and localized content. Base URL: https://tenor.googleapis.com/v2/
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://developers.google.com/tenor
     baseURL: https://tenor.googleapis.com/v2
     tags:
