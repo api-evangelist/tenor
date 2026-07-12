@@ -61,6 +61,10 @@ apis:
       - FN: Tenor Support
         url: https://support.google.com/tenor/
 common:
+  - type: VulnerabilityDisclosure
+    url: security/tenor-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/tenor-domain-security.yml
   - type: Documentation
     url: https://developers.google.com/tenor
   - type: GettingStarted
