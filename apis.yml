@@ -61,6 +61,8 @@ apis:
       - FN: Tenor Support
         url: https://support.google.com/tenor/
 common:
+  - type: AgenticAccess
+    url: agentic-access/tenor-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/tenor-vulnerability-disclosure.yml
   - type: DomainSecurity
