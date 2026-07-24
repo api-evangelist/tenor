@@ -1,0 +1,97 @@
+openapi: 3.0.0
+info:
+  title: Tenor Autocomplete Posts API
+  description: The Tenor API enables you to search for and share GIFs and stickers.
+  version: 1.0.0
+servers:
+- url: https://tenor.googleapis.com/v2
+tags:
+- name: Posts
+paths:
+  /posts:
+    get:
+      summary: Get Posts by IDs
+      description: 'Get the GIFs, stickers, or a combination of the two for the specified IDs.
+
+        '
+      parameters:
+      - name: key
+        in: query
+        description: As above.
+        required: true
+        schema:
+          type: string
+      - name: ids
+        in: query
+        description: 'A comma-separated list of Response Object IDs.
+
+
+          The maximum number of IDs is `50`.
+
+          '
+        required: true
+        schema:
+          type: string
+      - name: client_key
+        in: query
+        description: As above.
+        required: false
+        schema:
+          type: string
+      - name: media_filter
+        in: query
+        description: As above.
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response with a list of posts.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostsResults'
+        '400':
+          description: Bad request due to invalid parameters.
+        '401':
+          description: Unauthorized access due to an invalid API key.
+        '500':
+          description: Internal server error.
+      tags:
+      - Posts
+components:
+  schemas:
+    PostsResults:
+      type: object
+      properties:
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/ResponseObject'
+    ResponseObject:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the content.
+        title:
+          type: string
+          description: Title of the content.
+        media_formats:
+          type: object
+          description: Available media formats for the content.
+          additionalProperties:
+            type: object
+        created:
+          type: string
+          format: date-time
+          description: Creation timestamp of the content.
+        content_description:
+          type: string
+          description: Description of the content.
+        itemurl:
+          type: string
+          description: URL of the content's page on Tenor.
+        hasaudio:
+          type: boolean
+          description: Indicates if the content has audio.

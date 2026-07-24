@@ -1,0 +1,159 @@
+openapi: 3.0.0
+info:
+  title: Tenor Autocomplete Featured API
+  description: The Tenor API enables you to search for and share GIFs and stickers.
+  version: 1.0.0
+servers:
+- url: https://tenor.googleapis.com/v2
+tags:
+- name: Featured
+paths:
+  /featured:
+    get:
+      summary: Featured GIFs and Stickers
+      description: 'Get a JSON object that contains a list of the current global featured GIFs or stickers.
+
+
+        Tenor updates the featured stream regularly throughout the day.
+
+
+        When you include the URL parameter `searchfilter=sticker` in the request, Tenor''s Featured endpoint returns stickers rather than GIFs.
+
+        '
+      parameters:
+      - name: key
+        in: query
+        description: API key for privileged access.
+        required: true
+        schema:
+          type: string
+      - name: client_key
+        in: query
+        description: As above.
+        required: false
+        schema:
+          type: string
+      - name: searchfilter
+        in: query
+        description: As above.
+        required: false
+        schema:
+          type: string
+      - name: country
+        in: query
+        description: As above.
+        required: false
+        schema:
+          type: string
+          minLength: 2
+          maxLength: 2
+          default: US
+      - name: locale
+        in: query
+        description: As above.
+        required: false
+        schema:
+          type: string
+          default: en_US
+      - name: contentfilter
+        in: query
+        description: As above.
+        required: false
+        schema:
+          type: string
+          enum:
+          - false
+          - low
+          - medium
+          - high
+          default: false
+      - name: media_filter
+        in: query
+        description: As above.
+        required: false
+        schema:
+          type: string
+      - name: ar_range
+        in: query
+        description: As above.
+        required: false
+        schema:
+          type: string
+          enum:
+          - all
+          - wide
+          - standard
+          default: all
+      - name: limit
+        in: query
+        description: As above.
+        required: false
+        schema:
+          type: integer
+          default: 20
+          maximum: 50
+      - name: pos
+        in: query
+        description: As above.
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response with a list of featured GIFs or stickers.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SearchResults'
+        '400':
+          description: Bad request due to invalid parameters.
+        '401':
+          description: Unauthorized access due to an invalid API key.
+        '500':
+          description: Internal server error.
+      tags:
+      - Featured
+components:
+  schemas:
+    SearchResults:
+      type: object
+      properties:
+        next:
+          type: string
+          description: 'A position identifier to use with the next API query, through the `pos` field, to retrieve the next set of results.
+
+
+            If there are no further results, `next` returns an empty string.
+
+            '
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/ResponseObject'
+    ResponseObject:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the content.
+        title:
+          type: string
+          description: Title of the content.
+        media_formats:
+          type: object
+          description: Available media formats for the content.
+          additionalProperties:
+            type: object
+        created:
+          type: string
+          format: date-time
+          description: Creation timestamp of the content.
+        content_description:
+          type: string
+          description: Description of the content.
+        itemurl:
+          type: string
+          description: URL of the content's page on Tenor.
+        hasaudio:
+          type: boolean
+          description: Indicates if the content has audio.

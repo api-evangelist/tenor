@@ -1,0 +1,81 @@
+openapi: 3.0.0
+info:
+  title: Tenor Autocomplete Trending Terms API
+  description: The Tenor API enables you to search for and share GIFs and stickers.
+  version: 1.0.0
+servers:
+- url: https://tenor.googleapis.com/v2
+tags:
+- name: Trending Terms
+paths:
+  /trending_terms:
+    get:
+      summary: Trending Search Terms
+      description: 'Get a JSON object that contains a list of the current trending search terms.
+
+
+        Tenor''s AI updates the list hourly.
+
+        '
+      parameters:
+      - name: key
+        in: query
+        description: As above.
+        required: true
+        schema:
+          type: string
+      - name: client_key
+        in: query
+        description: As above.
+        required: false
+        schema:
+          type: string
+      - name: country
+        in: query
+        description: As above.
+        required: false
+        schema:
+          type: string
+          minLength: 2
+          maxLength: 2
+          default: US
+      - name: locale
+        in: query
+        description: As above.
+        required: false
+        schema:
+          type: string
+          default: en_US
+      - name: limit
+        in: query
+        description: As above.
+        required: false
+        schema:
+          type: integer
+          default: 20
+          maximum: 50
+      responses:
+        '200':
+          description: Successful response with trending search terms.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SuggestionsResults'
+        '400':
+          description: Bad request due to invalid parameters.
+        '401':
+          description: Unauthorized access due to an invalid API key.
+        '500':
+          description: Internal server error.
+      tags:
+      - Trending Terms
+components:
+  schemas:
+    SuggestionsResults:
+      type: object
+      properties:
+        results:
+          type: array
+          items:
+            type: string
+            description: A suggested search term.
