@@ -6,7 +6,19 @@ description: >
   applications. The API processes over 300 million searches per day across 45+ languages
   with localized, region-appropriate content. Note: As of January 2026, Google is no
   longer accepting new API clients; the API is scheduled for sunset on June 30, 2026.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: free
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Free
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/tenor.png
 url: https://raw.githubusercontent.com/api-evangelist/tenor/refs/heads/main/apis.yml
 created: '2026-06-13'
 modified: '2026-06-13'
@@ -19,47 +31,238 @@ tags:
   - Media
   - Google
 apis:
-  - aid: tenor:tenor-api
-    name: Tenor GIF Search API
-    description: >
-      REST API for searching and browsing animated GIFs and stickers. Provides endpoints
-      for GIF search, trending content, featured GIFs, categories, search suggestions,
-      autocomplete, and share registration. Built on Google's Tenor platform with support
-      for 45+ languages and localized content. Base URL: https://tenor.googleapis.com/v2/
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://developers.google.com/tenor
-    baseURL: https://tenor.googleapis.com/v2
-    tags:
-      - GIFs
-      - Animated Images
-      - Search
-      - Trending
-      - Categories
-      - Media
-    properties:
-      - type: Documentation
-        url: https://developers.google.com/tenor/guides/quickstart
-      - type: Endpoints
-        url: https://developers.google.com/tenor/guides/endpoints
-      - type: RateLimits
-        url: https://developers.google.com/tenor/guides/rate-limits-and-caching
-      - type: Authentication
-        url: https://developers.google.com/tenor/guides/quickstart
-      - type: AdvancedControls
-        url: https://developers.google.com/tenor/guides/advanced-api-controls
-      - type: ResponseObjects
-        url: https://developers.google.com/tenor/guides/response-objects-and-errors
-      - type: OpenAPI
-        url: https://github.com/zuplo-samples/Tenor-OpenAPI
-      - type: Plans
-        url: https://raw.githubusercontent.com/api-evangelist/tenor/refs/heads/main/plans/plans.yml
-      - type: RateLimits
-        url: https://raw.githubusercontent.com/api-evangelist/tenor/refs/heads/main/rate-limits/rate-limits.yml
-      - type: FinOps
-        url: https://raw.githubusercontent.com/api-evangelist/tenor/refs/heads/main/finops/finops.yml
-    contact:
-      - FN: Tenor Support
-        url: https://support.google.com/tenor/
+- aid: tenor:tenor-autocomplete-api
+  name: Tenor Autocomplete API
+  description: The Autocomplete API from Tenor — 1 operation(s) for autocomplete.
+  humanURL: https://developers.google.com/tenor
+  baseURL: https://tenor.googleapis.com/v2
+  tags:
+  - Autocomplete
+  properties:
+  - type: OpenAPI
+    url: openapi/tenor-autocomplete-api-openapi.yml
+  - type: Documentation
+    url: https://developers.google.com/tenor/guides/quickstart
+  - type: Endpoints
+    url: https://developers.google.com/tenor/guides/endpoints
+  - type: RateLimits
+    url: https://developers.google.com/tenor/guides/rate-limits-and-caching
+  - type: Authentication
+    url: https://developers.google.com/tenor/guides/quickstart
+  - type: AdvancedControls
+    url: https://developers.google.com/tenor/guides/advanced-api-controls
+  - type: ResponseObjects
+    url: https://developers.google.com/tenor/guides/response-objects-and-errors
+  - type: Plans
+    url: https://raw.githubusercontent.com/api-evangelist/tenor/refs/heads/main/plans/plans.yml
+  - type: RateLimits
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/tenor/refs/heads/main/rate-limits/rate-limits.yml
+  - type: FinOps
+    url: https://raw.githubusercontent.com/api-evangelist/tenor/refs/heads/main/finops/finops.yml
+- aid: tenor:tenor-categories-api
+  name: Tenor Categories API
+  description: The Categories API from Tenor — 1 operation(s) for categories.
+  humanURL: https://developers.google.com/tenor
+  baseURL: https://tenor.googleapis.com/v2
+  tags:
+  - Categories
+  properties:
+  - type: OpenAPI
+    url: openapi/tenor-categories-api-openapi.yml
+  - type: Documentation
+    url: https://developers.google.com/tenor/guides/quickstart
+  - type: Endpoints
+    url: https://developers.google.com/tenor/guides/endpoints
+  - type: RateLimits
+    url: https://developers.google.com/tenor/guides/rate-limits-and-caching
+  - type: Authentication
+    url: https://developers.google.com/tenor/guides/quickstart
+  - type: AdvancedControls
+    url: https://developers.google.com/tenor/guides/advanced-api-controls
+  - type: ResponseObjects
+    url: https://developers.google.com/tenor/guides/response-objects-and-errors
+  - type: Plans
+    url: https://raw.githubusercontent.com/api-evangelist/tenor/refs/heads/main/plans/plans.yml
+  - type: RateLimits
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/tenor/refs/heads/main/rate-limits/rate-limits.yml
+  - type: FinOps
+    url: https://raw.githubusercontent.com/api-evangelist/tenor/refs/heads/main/finops/finops.yml
+- aid: tenor:tenor-featured-api
+  name: Tenor Featured API
+  description: The Featured API from Tenor — 1 operation(s) for featured.
+  humanURL: https://developers.google.com/tenor
+  baseURL: https://tenor.googleapis.com/v2
+  tags:
+  - Featured
+  properties:
+  - type: OpenAPI
+    url: openapi/tenor-featured-api-openapi.yml
+  - type: Documentation
+    url: https://developers.google.com/tenor/guides/quickstart
+  - type: Endpoints
+    url: https://developers.google.com/tenor/guides/endpoints
+  - type: RateLimits
+    url: https://developers.google.com/tenor/guides/rate-limits-and-caching
+  - type: Authentication
+    url: https://developers.google.com/tenor/guides/quickstart
+  - type: AdvancedControls
+    url: https://developers.google.com/tenor/guides/advanced-api-controls
+  - type: ResponseObjects
+    url: https://developers.google.com/tenor/guides/response-objects-and-errors
+  - type: Plans
+    url: https://raw.githubusercontent.com/api-evangelist/tenor/refs/heads/main/plans/plans.yml
+  - type: RateLimits
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/tenor/refs/heads/main/rate-limits/rate-limits.yml
+  - type: FinOps
+    url: https://raw.githubusercontent.com/api-evangelist/tenor/refs/heads/main/finops/finops.yml
+- aid: tenor:tenor-posts-api
+  name: Tenor Posts API
+  description: The Posts API from Tenor — 1 operation(s) for posts.
+  humanURL: https://developers.google.com/tenor
+  baseURL: https://tenor.googleapis.com/v2
+  tags:
+  - Posts
+  properties:
+  - type: OpenAPI
+    url: openapi/tenor-posts-api-openapi.yml
+  - type: Documentation
+    url: https://developers.google.com/tenor/guides/quickstart
+  - type: Endpoints
+    url: https://developers.google.com/tenor/guides/endpoints
+  - type: RateLimits
+    url: https://developers.google.com/tenor/guides/rate-limits-and-caching
+  - type: Authentication
+    url: https://developers.google.com/tenor/guides/quickstart
+  - type: AdvancedControls
+    url: https://developers.google.com/tenor/guides/advanced-api-controls
+  - type: ResponseObjects
+    url: https://developers.google.com/tenor/guides/response-objects-and-errors
+  - type: Plans
+    url: https://raw.githubusercontent.com/api-evangelist/tenor/refs/heads/main/plans/plans.yml
+  - type: RateLimits
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/tenor/refs/heads/main/rate-limits/rate-limits.yml
+  - type: FinOps
+    url: https://raw.githubusercontent.com/api-evangelist/tenor/refs/heads/main/finops/finops.yml
+- aid: tenor:tenor-registershare-api
+  name: Tenor Registershare API
+  description: The Registershare API from Tenor — 1 operation(s) for registershare.
+  humanURL: https://developers.google.com/tenor
+  baseURL: https://tenor.googleapis.com/v2
+  tags:
+  - Registershare
+  properties:
+  - type: OpenAPI
+    url: openapi/tenor-registershare-api-openapi.yml
+  - type: Documentation
+    url: https://developers.google.com/tenor/guides/quickstart
+  - type: Endpoints
+    url: https://developers.google.com/tenor/guides/endpoints
+  - type: RateLimits
+    url: https://developers.google.com/tenor/guides/rate-limits-and-caching
+  - type: Authentication
+    url: https://developers.google.com/tenor/guides/quickstart
+  - type: AdvancedControls
+    url: https://developers.google.com/tenor/guides/advanced-api-controls
+  - type: ResponseObjects
+    url: https://developers.google.com/tenor/guides/response-objects-and-errors
+  - type: Plans
+    url: https://raw.githubusercontent.com/api-evangelist/tenor/refs/heads/main/plans/plans.yml
+  - type: RateLimits
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/tenor/refs/heads/main/rate-limits/rate-limits.yml
+  - type: FinOps
+    url: https://raw.githubusercontent.com/api-evangelist/tenor/refs/heads/main/finops/finops.yml
+- aid: tenor:tenor-search-api
+  name: Tenor Search API
+  description: The Search API from Tenor — 1 operation(s) for search.
+  humanURL: https://developers.google.com/tenor
+  baseURL: https://tenor.googleapis.com/v2
+  tags:
+  - Search
+  properties:
+  - type: OpenAPI
+    url: openapi/tenor-search-api-openapi.yml
+  - type: Documentation
+    url: https://developers.google.com/tenor/guides/quickstart
+  - type: Endpoints
+    url: https://developers.google.com/tenor/guides/endpoints
+  - type: RateLimits
+    url: https://developers.google.com/tenor/guides/rate-limits-and-caching
+  - type: Authentication
+    url: https://developers.google.com/tenor/guides/quickstart
+  - type: AdvancedControls
+    url: https://developers.google.com/tenor/guides/advanced-api-controls
+  - type: ResponseObjects
+    url: https://developers.google.com/tenor/guides/response-objects-and-errors
+  - type: Plans
+    url: https://raw.githubusercontent.com/api-evangelist/tenor/refs/heads/main/plans/plans.yml
+  - type: RateLimits
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/tenor/refs/heads/main/rate-limits/rate-limits.yml
+  - type: FinOps
+    url: https://raw.githubusercontent.com/api-evangelist/tenor/refs/heads/main/finops/finops.yml
+- aid: tenor:tenor-search-suggestions-api
+  name: Tenor Search Suggestions API
+  description: The Search Suggestions API from Tenor — 1 operation(s) for search suggestions.
+  humanURL: https://developers.google.com/tenor
+  baseURL: https://tenor.googleapis.com/v2
+  tags:
+  - Search Suggestions
+  properties:
+  - type: OpenAPI
+    url: openapi/tenor-search-suggestions-api-openapi.yml
+  - type: Documentation
+    url: https://developers.google.com/tenor/guides/quickstart
+  - type: Endpoints
+    url: https://developers.google.com/tenor/guides/endpoints
+  - type: RateLimits
+    url: https://developers.google.com/tenor/guides/rate-limits-and-caching
+  - type: Authentication
+    url: https://developers.google.com/tenor/guides/quickstart
+  - type: AdvancedControls
+    url: https://developers.google.com/tenor/guides/advanced-api-controls
+  - type: ResponseObjects
+    url: https://developers.google.com/tenor/guides/response-objects-and-errors
+  - type: Plans
+    url: https://raw.githubusercontent.com/api-evangelist/tenor/refs/heads/main/plans/plans.yml
+  - type: RateLimits
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/tenor/refs/heads/main/rate-limits/rate-limits.yml
+  - type: FinOps
+    url: https://raw.githubusercontent.com/api-evangelist/tenor/refs/heads/main/finops/finops.yml
+- aid: tenor:tenor-trending-terms-api
+  name: Tenor Trending Terms API
+  description: The Trending Terms API from Tenor — 1 operation(s) for trending terms.
+  humanURL: https://developers.google.com/tenor
+  baseURL: https://tenor.googleapis.com/v2
+  tags:
+  - Trending Terms
+  properties:
+  - type: OpenAPI
+    url: openapi/tenor-trending-terms-api-openapi.yml
+  - type: Documentation
+    url: https://developers.google.com/tenor/guides/quickstart
+  - type: Endpoints
+    url: https://developers.google.com/tenor/guides/endpoints
+  - type: RateLimits
+    url: https://developers.google.com/tenor/guides/rate-limits-and-caching
+  - type: Authentication
+    url: https://developers.google.com/tenor/guides/quickstart
+  - type: AdvancedControls
+    url: https://developers.google.com/tenor/guides/advanced-api-controls
+  - type: ResponseObjects
+    url: https://developers.google.com/tenor/guides/response-objects-and-errors
+  - type: Plans
+    url: https://raw.githubusercontent.com/api-evangelist/tenor/refs/heads/main/plans/plans.yml
+  - type: RateLimits
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/tenor/refs/heads/main/rate-limits/rate-limits.yml
+  - type: FinOps
+    url: https://raw.githubusercontent.com/api-evangelist/tenor/refs/heads/main/finops/finops.yml
 common:
   - type: AgenticAccess
     url: agentic-access/tenor-agentic-access.yml
