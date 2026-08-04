@@ -1,0 +1,28 @@
+{
+  "provider": "tenor",
+  "sources": [
+    "tenor-autocomplete-api-openapi.yml",
+    "tenor-categories-api-openapi.yml",
+    "tenor-featured-api-openapi.yml",
+    "tenor-posts-api-openapi.yml",
+    "tenor-registershare-api-openapi.yml",
+    "tenor-search-api-openapi.yml",
+    "tenor-search-suggestions-api-openapi.yml",
+    "tenor-trending-terms-api-openapi.yml"
+  ],
+  "outputs": [
+    "tenor-autocomplete-api-openapi.yml",
+    "tenor-categories-api-openapi.yml",
+    "tenor-featured-api-openapi.yml",
+    "tenor-posts-api-openapi.yml",
+    "tenor-registershare-api-openapi.yml",
+    "tenor-search-api-openapi.yml",
+    "tenor-search-suggestions-api-openapi.yml",
+    "tenor-trending-terms-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
