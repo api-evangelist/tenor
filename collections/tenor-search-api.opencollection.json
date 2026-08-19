@@ -1,0 +1,103 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Tenor Autocomplete Search API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Search",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Search GIFs and Stickers",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://tenor.googleapis.com/v2/search",
+            "params": [
+              {
+                "name": "key",
+                "value": "",
+                "type": "query",
+                "description": "API key for privileged access."
+              },
+              {
+                "name": "q",
+                "value": "",
+                "type": "query",
+                "description": "A search string."
+              },
+              {
+                "name": "client_key",
+                "value": "",
+                "type": "query",
+                "description": "A client-specified string that represents the integration.\n\nThe client key lets you use the same API key across different integrations but still be able to differentiate them.\n\nFor an app integration, use the same `client_key` value for all API calls.\n"
+              },
+              {
+                "name": "searchfilter",
+                "value": "",
+                "type": "query",
+                "description": "Comma-separated list of non-GIF content types to filter the Response Objects.\n\nAccepted values are `sticker`, `static`, and `-static`.\n\n- `searchfilter=sticker` returns both static and animated sticker content.\n- `searchfilter=sticker,-static` returns only animated sticker content.\n- `searchfilter=sticker,static` returns only static sticker content.\n\nFor GIF content, either leave `searchfilter` blank or don't use it.\n"
+              },
+              {
+                "name": "country",
+                "value": "",
+                "type": "query",
+                "description": "Specify the country of origin for the request.\n\nProvide its two-letter ISO 3166-1 country code.\n"
+              },
+              {
+                "name": "locale",
+                "value": "",
+                "type": "query",
+                "description": "Specify the default language to interpret the search string.\n\nFormat: `xx` or `xx_YY`, where `xx` is the ISO 639-1 language code and `YY` is the optional two-letter ISO 3166-1 country code.\n"
+              },
+              {
+                "name": "contentfilter",
+                "value": "",
+                "type": "query",
+                "description": "Specify the content safety filter level.\n\nAccepted values are `off`, `low`, `medium`, and `high`.\n\nThe default value is `off`.\n"
+              },
+              {
+                "name": "media_filter",
+                "value": "",
+                "type": "query",
+                "description": "Comma-separated list of GIF formats to filter the Response Objects.\n\nExample: `media_filter=gif,tinygif,mp4,tinymp4`.\n\nBy default, `media_filter` returns all formats for each Response Object.\n"
+              },
+              {
+                "name": "ar_range",
+                "value": "",
+                "type": "query",
+                "description": "Filter the Response Objects to only include GIFs with aspect ratios that fit within the selected range.\n\nAccepted values are:\n\n- `all`: No constraints (default)\n- `wide`: 0.42 <= aspect ratio <= 2.36\n- `standard`: 0.56 <= aspect ratio <= 1.78\n"
+              },
+              {
+                "name": "random",
+                "value": "",
+                "type": "query",
+                "description": "Specify whether to randomly order the response.\n\nAccepted values are `true` and `false`.\n\nThe default value is `false`.\n"
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "Fetch up to the specified number of results.\n\nThe default value is `20`, and the maximum value is `50`.\n"
+              },
+              {
+                "name": "pos",
+                "value": "",
+                "type": "query",
+                "description": "Retrieve results that start at the position \"value\".\n\nUse a non-zero, non-empty value from `next`, returned by the API response, to get the next set of results.\n\n`pos` isn't an index and might be an integer, float, or string.\n"
+              }
+            ]
+          },
+          "docs": "Get a JSON object that contains a list of the most relevant GIFs or stickers for a given set of search terms, categories, emojis, or any combination of these.\n\nWhen you include the URL parameter `searchfilter=sticker` in the request, Tenor's search endpoint returns stickers rather than GIFs.\n"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

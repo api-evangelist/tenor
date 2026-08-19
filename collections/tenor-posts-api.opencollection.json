@@ -1,0 +1,55 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Tenor Autocomplete Posts API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Posts",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Posts by IDs",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://tenor.googleapis.com/v2/posts",
+            "params": [
+              {
+                "name": "key",
+                "value": "",
+                "type": "query",
+                "description": "As above."
+              },
+              {
+                "name": "ids",
+                "value": "",
+                "type": "query",
+                "description": "A comma-separated list of Response Object IDs.\n\nThe maximum number of IDs is `50`.\n"
+              },
+              {
+                "name": "client_key",
+                "value": "",
+                "type": "query",
+                "description": "As above."
+              },
+              {
+                "name": "media_filter",
+                "value": "",
+                "type": "query",
+                "description": "As above."
+              }
+            ]
+          },
+          "docs": "Get the GIFs, stickers, or a combination of the two for the specified IDs.\n"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

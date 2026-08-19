@@ -1,0 +1,61 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Tenor Autocomplete Trending Terms API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Trending Terms",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Trending Search Terms",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://tenor.googleapis.com/v2/trending_terms",
+            "params": [
+              {
+                "name": "key",
+                "value": "",
+                "type": "query",
+                "description": "As above."
+              },
+              {
+                "name": "client_key",
+                "value": "",
+                "type": "query",
+                "description": "As above."
+              },
+              {
+                "name": "country",
+                "value": "",
+                "type": "query",
+                "description": "As above."
+              },
+              {
+                "name": "locale",
+                "value": "",
+                "type": "query",
+                "description": "As above."
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "As above."
+              }
+            ]
+          },
+          "docs": "Get a JSON object that contains a list of the current trending search terms.\n\nTenor's AI updates the list hourly.\n"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,67 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Tenor Autocomplete Categories API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Categories",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Categories",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://tenor.googleapis.com/v2/categories",
+            "params": [
+              {
+                "name": "key",
+                "value": "",
+                "type": "query",
+                "description": "As above."
+              },
+              {
+                "name": "client_key",
+                "value": "",
+                "type": "query",
+                "description": "As above."
+              },
+              {
+                "name": "country",
+                "value": "",
+                "type": "query",
+                "description": "As above."
+              },
+              {
+                "name": "locale",
+                "value": "",
+                "type": "query",
+                "description": "As above."
+              },
+              {
+                "name": "type",
+                "value": "",
+                "type": "query",
+                "description": "Determines the type of categories returned.\n\nAccepted values are `featured` (default) and `trending`.\n"
+              },
+              {
+                "name": "contentfilter",
+                "value": "",
+                "type": "query",
+                "description": "As above."
+              }
+            ]
+          },
+          "docs": "Get a JSON object that contains a list of GIF categories associated with the provided type.\n\nEach category includes a corresponding search URL to use if the user clicks on the category. The search URL includes any parameters from the original call to the Categories endpoint.\n"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,414 @@
+{
+  "item": [
+    {
+      "id": "9b389d8d-fa41-452d-a684-ac7effcfa81f",
+      "name": "Featured",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "9283a62e-c6d8-4bea-a491-93d3b8ee1717",
+          "name": "Featured GIFs and Stickers",
+          "request": {
+            "name": "Featured GIFs and Stickers",
+            "description": {
+              "content": "Get a JSON object that contains a list of the current global featured GIFs or stickers.\n\nTenor updates the featured stream regularly throughout the day.\n\nWhen you include the URL parameter `searchfilter=sticker` in the request, Tenor's Featured endpoint returns stickers rather than GIFs.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "featured"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "key",
+                  "value": "<string>",
+                  "description": "(Required) API key for privileged access."
+                },
+                {
+                  "disabled": false,
+                  "key": "client_key",
+                  "value": "<string>",
+                  "description": "As above."
+                },
+                {
+                  "disabled": false,
+                  "key": "searchfilter",
+                  "value": "<string>",
+                  "description": "As above."
+                },
+                {
+                  "disabled": false,
+                  "key": "country",
+                  "value": "US",
+                  "description": "As above."
+                },
+                {
+                  "disabled": false,
+                  "key": "locale",
+                  "value": "en_US",
+                  "description": "As above."
+                },
+                {
+                  "disabled": false,
+                  "key": "contentfilter",
+                  "value": "false",
+                  "description": "As above."
+                },
+                {
+                  "disabled": false,
+                  "key": "media_filter",
+                  "value": "<string>",
+                  "description": "As above."
+                },
+                {
+                  "disabled": false,
+                  "key": "ar_range",
+                  "value": "all",
+                  "description": "As above."
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "20",
+                  "description": "As above."
+                },
+                {
+                  "disabled": false,
+                  "key": "pos",
+                  "value": "<string>",
+                  "description": "As above."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "100cb45d-3033-4183-a0a4-d2ec94473fcc",
+              "name": "Successful response with a list of featured GIFs or stickers.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "featured"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "client_key",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "searchfilter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "country",
+                      "value": "US"
+                    },
+                    {
+                      "key": "locale",
+                      "value": "en_US"
+                    },
+                    {
+                      "key": "contentfilter",
+                      "value": "false"
+                    },
+                    {
+                      "key": "media_filter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "ar_range",
+                      "value": "all"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "20"
+                    },
+                    {
+                      "key": "pos",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"next\": \"string\",\n  \"results\": [\n    {\n      \"id\": \"string\",\n      \"title\": \"string\",\n      \"media_formats\": {\n        \"key_0\": {},\n        \"key_1\": {},\n        \"key_2\": {},\n        \"key_3\": {},\n        \"key_4\": {}\n      },\n      \"created\": \"1960-10-31T14:17:57.779Z\",\n      \"content_description\": \"string\",\n      \"itemurl\": \"string\",\n      \"hasaudio\": true\n    },\n    {\n      \"id\": \"string\",\n      \"title\": \"string\",\n      \"media_formats\": {\n        \"key_0\": {}\n      },\n      \"created\": \"1962-07-02T02:50:27.351Z\",\n      \"content_description\": \"string\",\n      \"itemurl\": \"string\",\n      \"hasaudio\": false\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "72d7e377-873d-4b9b-82b2-887abe53cb83",
+              "name": "Bad request due to invalid parameters.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "featured"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "client_key",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "searchfilter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "country",
+                      "value": "US"
+                    },
+                    {
+                      "key": "locale",
+                      "value": "en_US"
+                    },
+                    {
+                      "key": "contentfilter",
+                      "value": "false"
+                    },
+                    {
+                      "key": "media_filter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "ar_range",
+                      "value": "all"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "20"
+                    },
+                    {
+                      "key": "pos",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "86e300df-792d-4956-a5f3-a61f66bc59d3",
+              "name": "Unauthorized access due to an invalid API key.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "featured"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "client_key",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "searchfilter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "country",
+                      "value": "US"
+                    },
+                    {
+                      "key": "locale",
+                      "value": "en_US"
+                    },
+                    {
+                      "key": "contentfilter",
+                      "value": "false"
+                    },
+                    {
+                      "key": "media_filter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "ar_range",
+                      "value": "all"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "20"
+                    },
+                    {
+                      "key": "pos",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "b7130d49-4cf0-4930-b832-b5c6390d5e87",
+              "name": "Internal server error.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "featured"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "client_key",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "searchfilter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "country",
+                      "value": "US"
+                    },
+                    {
+                      "key": "locale",
+                      "value": "en_US"
+                    },
+                    {
+                      "key": "contentfilter",
+                      "value": "false"
+                    },
+                    {
+                      "key": "media_filter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "ar_range",
+                      "value": "all"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "20"
+                    },
+                    {
+                      "key": "pos",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://tenor.googleapis.com/v2",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "7bd89d6c-881a-482a-bb50-9d8168a78656",
+    "name": "Tenor Autocomplete Featured API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Tenor API enables you to search for and share GIFs and stickers.",
+      "type": "text/plain"
+    }
+  }
+}

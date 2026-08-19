@@ -1,0 +1,67 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Tenor Autocomplete Registershare API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Registershare",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Register Share",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://tenor.googleapis.com/v2/registershare",
+            "params": [
+              {
+                "name": "key",
+                "value": "",
+                "type": "query",
+                "description": "As above."
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "query",
+                "description": "The `id` of a Response Object."
+              },
+              {
+                "name": "client_key",
+                "value": "",
+                "type": "query",
+                "description": "As above."
+              },
+              {
+                "name": "country",
+                "value": "",
+                "type": "query",
+                "description": "As above."
+              },
+              {
+                "name": "locale",
+                "value": "",
+                "type": "query",
+                "description": "As above."
+              },
+              {
+                "name": "q",
+                "value": "",
+                "type": "query",
+                "description": "The search string that leads to this share."
+              }
+            ]
+          },
+          "docs": "Register a user's sharing of a GIF or sticker.\n\nThis optional call helps Tenor's Search Engine AI tune its results.\n"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

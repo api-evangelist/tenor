@@ -1,0 +1,67 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Tenor Autocomplete Search Suggestions API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Search Suggestions",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Search Suggestions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://tenor.googleapis.com/v2/search_suggestions",
+            "params": [
+              {
+                "name": "key",
+                "value": "",
+                "type": "query",
+                "description": "As above."
+              },
+              {
+                "name": "q",
+                "value": "",
+                "type": "query",
+                "description": "A search string."
+              },
+              {
+                "name": "client_key",
+                "value": "",
+                "type": "query",
+                "description": "As above."
+              },
+              {
+                "name": "country",
+                "value": "",
+                "type": "query",
+                "description": "As above."
+              },
+              {
+                "name": "locale",
+                "value": "",
+                "type": "query",
+                "description": "As above."
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "As above."
+              }
+            ]
+          },
+          "docs": "Get a JSON object that contains a list of alternative search terms for a given search term.\n\nSearch suggestions help a user narrow their search or discover related search terms to find a more precise GIF or sticker.\n"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

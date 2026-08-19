@@ -1,0 +1,67 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Tenor Autocomplete API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Autocomplete",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Autocomplete",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://tenor.googleapis.com/v2/autocomplete",
+            "params": [
+              {
+                "name": "key",
+                "value": "",
+                "type": "query",
+                "description": "As above."
+              },
+              {
+                "name": "q",
+                "value": "",
+                "type": "query",
+                "description": "A partial search string."
+              },
+              {
+                "name": "client_key",
+                "value": "",
+                "type": "query",
+                "description": "As above."
+              },
+              {
+                "name": "country",
+                "value": "",
+                "type": "query",
+                "description": "As above."
+              },
+              {
+                "name": "locale",
+                "value": "",
+                "type": "query",
+                "description": "As above."
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "As above."
+              }
+            ]
+          },
+          "docs": "Get a JSON object that contains a list of completed search terms for a given partial search term.\n\nThe list is sorted by Tenor's AI, and the number of results decreases as Tenor's AI becomes more certain.\n"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

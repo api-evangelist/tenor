@@ -1,0 +1,91 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Tenor Autocomplete Featured API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Featured",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Featured GIFs and Stickers",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://tenor.googleapis.com/v2/featured",
+            "params": [
+              {
+                "name": "key",
+                "value": "",
+                "type": "query",
+                "description": "API key for privileged access."
+              },
+              {
+                "name": "client_key",
+                "value": "",
+                "type": "query",
+                "description": "As above."
+              },
+              {
+                "name": "searchfilter",
+                "value": "",
+                "type": "query",
+                "description": "As above."
+              },
+              {
+                "name": "country",
+                "value": "",
+                "type": "query",
+                "description": "As above."
+              },
+              {
+                "name": "locale",
+                "value": "",
+                "type": "query",
+                "description": "As above."
+              },
+              {
+                "name": "contentfilter",
+                "value": "",
+                "type": "query",
+                "description": "As above."
+              },
+              {
+                "name": "media_filter",
+                "value": "",
+                "type": "query",
+                "description": "As above."
+              },
+              {
+                "name": "ar_range",
+                "value": "",
+                "type": "query",
+                "description": "As above."
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "As above."
+              },
+              {
+                "name": "pos",
+                "value": "",
+                "type": "query",
+                "description": "As above."
+              }
+            ]
+          },
+          "docs": "Get a JSON object that contains a list of the current global featured GIFs or stickers.\n\nTenor updates the featured stream regularly throughout the day.\n\nWhen you include the URL parameter `searchfilter=sticker` in the request, Tenor's Featured endpoint returns stickers rather than GIFs.\n"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
