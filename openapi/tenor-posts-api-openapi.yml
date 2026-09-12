@@ -1,4 +1,4 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
   title: Tenor Autocomplete Posts API
   description: The Tenor API enables you to search for and share GIFs and stickers.

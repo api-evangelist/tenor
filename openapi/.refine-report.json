@@ -23,6 +23,16 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
+  "notes": [
+    "tenor-autocomplete-api-openapi.yml: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
+    "tenor-categories-api-openapi.yml: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
+    "tenor-featured-api-openapi.yml: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
+    "tenor-posts-api-openapi.yml: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
+    "tenor-registershare-api-openapi.yml: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
+    "tenor-search-api-openapi.yml: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
+    "tenor-search-suggestions-api-openapi.yml: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
+    "tenor-trending-terms-api-openapi.yml: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
   "skipped": []
 }

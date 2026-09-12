@@ -276,6 +276,8 @@ apis:
   - type: FinOps
     url: https://raw.githubusercontent.com/api-evangelist/tenor/refs/heads/main/finops/finops.yml
 common:
+  - type: Website
+    url: https://tenor.com/
   - type: AgenticAccess
     url: agentic-access/tenor-agentic-access.yml
   - type: VulnerabilityDisclosure
@@ -299,3 +301,5 @@ common:
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+x-parent: google
+x-relationship: acquisition
