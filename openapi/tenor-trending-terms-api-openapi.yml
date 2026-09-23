@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Tenor Autocomplete Trending Terms API
+  title: Tenor Trending Terms API
   description: The Tenor API enables you to search for and share GIFs and stickers.
   version: 1.0.0
 servers:
@@ -14,9 +14,7 @@ paths:
       description: 'Get a JSON object that contains a list of the current trending search terms.
 
 
-        Tenor''s AI updates the list hourly.
-
-        '
+        Tenor''s AI updates the list hourly.'
       parameters:
       - name: key
         in: query
@@ -69,6 +67,8 @@ paths:
           description: Internal server error.
       tags:
       - Trending Terms
+      operationId: getTrendingTerms
+      x-operation-id-source: derived
 components:
   schemas:
     SuggestionsResults:

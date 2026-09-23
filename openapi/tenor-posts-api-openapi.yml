@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Tenor Autocomplete Posts API
+  title: Tenor Posts API
   description: The Tenor API enables you to search for and share GIFs and stickers.
   version: 1.0.0
 servers:
@@ -11,9 +11,7 @@ paths:
   /posts:
     get:
       summary: Get Posts by IDs
-      description: 'Get the GIFs, stickers, or a combination of the two for the specified IDs.
-
-        '
+      description: Get the GIFs, stickers, or a combination of the two for the specified IDs.
       parameters:
       - name: key
         in: query
@@ -59,6 +57,8 @@ paths:
           description: Internal server error.
       tags:
       - Posts
+      operationId: getPosts
+      x-operation-id-source: derived
 components:
   schemas:
     PostsResults:

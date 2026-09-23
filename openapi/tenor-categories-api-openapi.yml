@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Tenor Autocomplete Categories API
+  title: Tenor Categories API
   description: The Tenor API enables you to search for and share GIFs and stickers.
   version: 1.0.0
 servers:
@@ -14,9 +14,7 @@ paths:
       description: 'Get a JSON object that contains a list of GIF categories associated with the provided type.
 
 
-        Each category includes a corresponding search URL to use if the user clicks on the category. The search URL includes any parameters from the original call to the Categories endpoint.
-
-        '
+        Each category includes a corresponding search URL to use if the user clicks on the category. The search URL includes any parameters from the original call to the Categories endpoint.'
       parameters:
       - name: key
         in: query
@@ -88,6 +86,8 @@ paths:
           description: Internal server error.
       tags:
       - Categories
+      operationId: getCategories
+      x-operation-id-source: derived
 components:
   schemas:
     CategoryObject:

@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Tenor Autocomplete Featured API
+  title: Tenor Featured API
   description: The Tenor API enables you to search for and share GIFs and stickers.
   version: 1.0.0
 servers:
@@ -17,9 +17,7 @@ paths:
         Tenor updates the featured stream regularly throughout the day.
 
 
-        When you include the URL parameter `searchfilter=sticker` in the request, Tenor''s Featured endpoint returns stickers rather than GIFs.
-
-        '
+        When you include the URL parameter `searchfilter=sticker` in the request, Tenor''s Featured endpoint returns stickers rather than GIFs.'
       parameters:
       - name: key
         in: query
@@ -113,8 +111,25 @@ paths:
           description: Internal server error.
       tags:
       - Featured
+      operationId: getFeatured
+      x-operation-id-source: derived
 components:
   schemas:
+    SearchResults:
+      type: object
+      properties:
+        next:
+          type: string
+          description: 'A position identifier to use with the next API query, through the `pos` field, to retrieve the next set of results.
+
+
+            If there are no further results, `next` returns an empty string.
+
+            '
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/ResponseObject'
     ResponseObject:
       type: object
       properties:
@@ -142,18 +157,3 @@ components:
         hasaudio:
           type: boolean
           description: Indicates if the content has audio.
-    SearchResults:
-      type: object
-      properties:
-        next:
-          type: string
-          description: 'A position identifier to use with the next API query, through the `pos` field, to retrieve the next set of results.
-
-
-            If there are no further results, `next` returns an empty string.
-
-            '
-        results:
-          type: array
-          items:
-            $ref: '#/components/schemas/ResponseObject'

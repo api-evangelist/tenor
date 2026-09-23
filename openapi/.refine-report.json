@@ -1,14 +1,7 @@
 {
   "provider": "tenor",
   "sources": [
-    "tenor-autocomplete-api-openapi.yml",
-    "tenor-categories-api-openapi.yml",
-    "tenor-featured-api-openapi.yml",
-    "tenor-posts-api-openapi.yml",
-    "tenor-registershare-api-openapi.yml",
-    "tenor-search-api-openapi.yml",
-    "tenor-search-suggestions-api-openapi.yml",
-    "tenor-trending-terms-api-openapi.yml"
+    "_original/openapi.yml"
   ],
   "outputs": [
     "tenor-autocomplete-api-openapi.yml",
@@ -24,15 +17,34 @@
   "errors": [],
   "warnings": [],
   "notes": [
-    "tenor-autocomplete-api-openapi.yml: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
-    "tenor-categories-api-openapi.yml: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
-    "tenor-featured-api-openapi.yml: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
-    "tenor-posts-api-openapi.yml: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
-    "tenor-registershare-api-openapi.yml: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
-    "tenor-search-api-openapi.yml: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
-    "tenor-search-suggestions-api-openapi.yml: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
-    "tenor-trending-terms-api-openapi.yml: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "openapi.yml: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
+    "openapi.yml: tagged paths GET /search -> Search",
+    "openapi.yml: tagged paths GET /featured -> Featured",
+    "openapi.yml: tagged paths GET /categories -> Categories",
+    "openapi.yml: tagged paths GET /search_suggestions -> Search Suggestions",
+    "openapi.yml: tagged paths GET /autocomplete -> Autocomplete",
+    "openapi.yml: tagged paths GET /trending_terms -> Trending Terms",
+    "openapi.yml: tagged paths GET /registershare -> Registershare",
+    "openapi.yml: tagged paths GET /posts -> Posts",
+    "openapi.yml: declared missing tag: Autocomplete",
+    "openapi.yml: declared missing tag: Categories",
+    "openapi.yml: declared missing tag: Featured",
+    "openapi.yml: declared missing tag: Posts",
+    "openapi.yml: declared missing tag: Registershare",
+    "openapi.yml: declared missing tag: Search",
+    "openapi.yml: declared missing tag: Search Suggestions",
+    "openapi.yml: declared missing tag: Trending Terms",
     "apis.yml register: already-registered"
   ],
-  "skipped": []
+  "skipped": [
+    "tenor-autocomplete-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "tenor-categories-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "tenor-featured-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "tenor-posts-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "tenor-registershare-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "tenor-search-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "tenor-search-suggestions-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "tenor-trending-terms-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

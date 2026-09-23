@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Tenor Autocomplete Search Suggestions API
+  title: Tenor Search Suggestions API
   description: The Tenor API enables you to search for and share GIFs and stickers.
   version: 1.0.0
 servers:
@@ -14,9 +14,7 @@ paths:
       description: 'Get a JSON object that contains a list of alternative search terms for a given search term.
 
 
-        Search suggestions help a user narrow their search or discover related search terms to find a more precise GIF or sticker.
-
-        '
+        Search suggestions help a user narrow their search or discover related search terms to find a more precise GIF or sticker.'
       parameters:
       - name: key
         in: query
@@ -75,6 +73,8 @@ paths:
           description: Internal server error.
       tags:
       - Search Suggestions
+      operationId: getSearchSuggestions
+      x-operation-id-source: derived
 components:
   schemas:
     SuggestionsResults:

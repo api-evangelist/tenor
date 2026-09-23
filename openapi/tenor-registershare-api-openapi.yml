@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Tenor Autocomplete Registershare API
+  title: Tenor Registershare API
   description: The Tenor API enables you to search for and share GIFs and stickers.
   version: 1.0.0
 servers:
@@ -14,9 +14,7 @@ paths:
       description: 'Register a user''s sharing of a GIF or sticker.
 
 
-        This optional call helps Tenor''s Search Engine AI tune its results.
-
-        '
+        This optional call helps Tenor''s Search Engine AI tune its results.'
       parameters:
       - name: key
         in: query
@@ -69,3 +67,5 @@ paths:
           description: Internal server error.
       tags:
       - Registershare
+      operationId: getRegistershare
+      x-operation-id-source: derived

@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Tenor Autocomplete Search API
+  title: Tenor Search API
   description: The Tenor API enables you to search for and share GIFs and stickers.
   version: 1.0.0
 servers:
@@ -14,9 +14,7 @@ paths:
       description: 'Get a JSON object that contains a list of the most relevant GIFs or stickers for a given set of search terms, categories, emojis, or any combination of these.
 
 
-        When you include the URL parameter `searchfilter=sticker` in the request, Tenor''s search endpoint returns stickers rather than GIFs.
-
-        '
+        When you include the URL parameter `searchfilter=sticker` in the request, Tenor''s search endpoint returns stickers rather than GIFs.'
       parameters:
       - name: key
         in: query
@@ -205,8 +203,25 @@ paths:
           description: Internal server error.
       tags:
       - Search
+      operationId: getSearch
+      x-operation-id-source: derived
 components:
   schemas:
+    SearchResults:
+      type: object
+      properties:
+        next:
+          type: string
+          description: 'A position identifier to use with the next API query, through the `pos` field, to retrieve the next set of results.
+
+
+            If there are no further results, `next` returns an empty string.
+
+            '
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/ResponseObject'
     ResponseObject:
       type: object
       properties:
@@ -234,18 +249,3 @@ components:
         hasaudio:
           type: boolean
           description: Indicates if the content has audio.
-    SearchResults:
-      type: object
-      properties:
-        next:
-          type: string
-          description: 'A position identifier to use with the next API query, through the `pos` field, to retrieve the next set of results.
-
-
-            If there are no further results, `next` returns an empty string.
-
-            '
-        results:
-          type: array
-          items:
-            $ref: '#/components/schemas/ResponseObject'

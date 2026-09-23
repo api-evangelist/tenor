@@ -14,9 +14,7 @@ paths:
       description: 'Get a JSON object that contains a list of completed search terms for a given partial search term.
 
 
-        The list is sorted by Tenor''s AI, and the number of results decreases as Tenor''s AI becomes more certain.
-
-        '
+        The list is sorted by Tenor''s AI, and the number of results decreases as Tenor''s AI becomes more certain.'
       parameters:
       - name: key
         in: query
@@ -75,6 +73,8 @@ paths:
           description: Internal server error.
       tags:
       - Autocomplete
+      operationId: getAutocomplete
+      x-operation-id-source: derived
 components:
   schemas:
     SuggestionsResults:
