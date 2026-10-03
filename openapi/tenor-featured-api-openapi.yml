@@ -60,11 +60,11 @@ paths:
         schema:
           type: string
           enum:
-          - false
+          - 'off'
           - low
           - medium
           - high
-          default: false
+          default: 'off'
       - name: media_filter
         in: query
         description: As above.

@@ -66,11 +66,11 @@ paths:
         schema:
           type: string
           enum:
-          - false
+          - 'off'
           - low
           - medium
           - high
-          default: false
+          default: 'off'
       responses:
         '200':
           description: Successful response with a list of categories.
