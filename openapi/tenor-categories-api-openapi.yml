@@ -90,6 +90,13 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    CategoriesResults:
+      type: object
+      properties:
+        tags:
+          type: array
+          items:
+            $ref: '#/components/schemas/CategoryObject'
     CategoryObject:
       type: object
       properties:
@@ -102,10 +109,3 @@ components:
         path:
           type: string
           description: Search URL to use if the user clicks on the category.
-    CategoriesResults:
-      type: object
-      properties:
-        tags:
-          type: array
-          items:
-            $ref: '#/components/schemas/CategoryObject'

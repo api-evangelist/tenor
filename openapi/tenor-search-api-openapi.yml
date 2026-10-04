@@ -207,21 +207,6 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    SearchResults:
-      type: object
-      properties:
-        next:
-          type: string
-          description: 'A position identifier to use with the next API query, through the `pos` field, to retrieve the next set of results.
-
-
-            If there are no further results, `next` returns an empty string.
-
-            '
-        results:
-          type: array
-          items:
-            $ref: '#/components/schemas/ResponseObject'
     ResponseObject:
       type: object
       properties:
@@ -249,3 +234,18 @@ components:
         hasaudio:
           type: boolean
           description: Indicates if the content has audio.
+    SearchResults:
+      type: object
+      properties:
+        next:
+          type: string
+          description: 'A position identifier to use with the next API query, through the `pos` field, to retrieve the next set of results.
+
+
+            If there are no further results, `next` returns an empty string.
+
+            '
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/ResponseObject'
